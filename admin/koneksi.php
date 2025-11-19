@@ -2,8 +2,8 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$db = "datajamaah";
+$db = "datajamah";
 
-$koneksi = mysqli_connect($host,$username,$password, $db);
+$koneksi = mysqli_connect($host, $username, $password, $db);
 
 ?>
