@@ -74,6 +74,7 @@ $batas_bayar = date('d F Y', strtotime($tgl_pendaftaran . ' + 7 days'));
 // Untuk tampilan nomor pendaftaran (Kita tetap tampilkan NOID sebagai REG ID)
 $reg_number = $noid_pendaftar;
 
+// URL WhatsApp sudah saya perbaiki ke nomor yang Anda berikan
 $whatsapp_message = "Assalamu'alaikum, saya " . $data_pendaftar['nama'] . " sudah melakukan pembayaran DP (" . $formatted_biaya_dp . ") untuk pendaftaran Umroh dengan No. REG-" . $reg_number . ". Paket: " . $nama_paket_terpilih;
 $encoded_whatsapp_message = urlencode($whatsapp_message);
 
@@ -207,6 +208,21 @@ $encoded_whatsapp_message = urlencode($whatsapp_message);
             background-color: #128C7E;
             color: white;
         }
+
+        /* Gaya baru untuk tombol kembali */
+        .btn-back {
+            background-color: #6c757d;
+            color: white;
+            font-weight: 600;
+            margin-top: 20px;
+            padding: 10px 25px;
+            transition: background 0.2s;
+        }
+
+        .btn-back:hover {
+            background-color: #5a6268;
+            color: white;
+        }
     </style>
 </head>
 
@@ -279,6 +295,14 @@ $encoded_whatsapp_message = urlencode($whatsapp_message);
                             <i class="fab fa-whatsapp"></i> Konfirmasi Sekarang via WhatsApp
                         </a>
                         <p class="mt-3 text-muted">*(Nomor WhatsApp hanya contoh)*</p>
+                    </div>
+
+                    <hr class="mt-5 mb-4">
+
+                    <div class="text-center">
+                        <a href="beranda.php" class="btn btn-back">
+                            <i class="fas fa-home"></i> Kembali ke Beranda Utama
+                        </a>
                     </div>
 
                 </div>
